@@ -30,6 +30,11 @@
             font-weight: bolder;
         } 
     </style>
+    <script type="text/javascript">
+        (function(){
+            emailjs.init("YOUR_USER_ID"); // Replace 'YOUR_USER_ID' with your actual user ID
+        })();
+    </script>
 </head>
 
 <body>
@@ -145,22 +150,57 @@
             </ul>
             <br/>
             <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>Contact</strong></span></div>
-            <div>
-                <span class="output">
-                <br/>
-                {
-                    <br/><br/>
-                    <p>&nbsp;&nbsp;<i class="material-icons">mail</i> "Email": <span>"jordanesikati@gmail.com"</span>,</p>
-                    <p>&nbsp;&nbsp;<i class="material-icons">call</i> "Phone": <span>None</span>,</p>
-                    <p>&nbsp;&nbsp;<i class="material-icons">location_on</i> "Address": <span>"Ottawa, ON"</span></p>
-                    <p>&nbsp;&nbsp;&nbsp;&nbsp;<img class="rounded" src="assets/images/ontario.png" alt="..." width="200" height="200" style="border: 1px solid #ffffff;"></p>
-                }
-                <br/><br/>
-                </span>
+            <div class="row">
+                <div class="col-6">
+                    <div>
+                        <span class="output">
+                        <br/>
+                        {
+                            <br/><br/>
+                            <p>&nbsp;&nbsp;<i class="material-icons">mail</i> "Email": <span>"jordanesikati@gmail.com"</span>,</p>
+                            <p>&nbsp;&nbsp;<i class="material-icons">call</i> "Phone": <span>None</span>,</p>
+                            <p>&nbsp;&nbsp;<i class="material-icons">location_on</i> "Address": <span>"Ottawa, ON"</span></p>
+                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<img class="rounded" src="assets/images/ontario.png" alt="..." width="200" height="200" style="border: 1px solid #ffffff;"></p>
+                        }
+                        <br/><br/>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="col-6">
+                    <div class="container mt-5">
+                        <h3 class="mb-4">Contact Us</h3>
+                        <form id="contact-form" class="needs-validation" novalidate>
+                            <div class="mb-3">
+                                <label for="name" class="form-label">Name</label>
+                                <input type="text" class="form-control" id="name" name="name" style="background-color: #000000; color:#ffffff;" required>
+                                <div class="invalid-feedback">
+                                    Please enter your name.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="email" class="form-label">Email</label>
+                                <input type="email" class="form-control" id="email" name="email" style="background-color: #000000; color:#ffffff;" required>
+                                <div class="invalid-feedback">
+                                    Please enter a valid email address.
+                                </div>
+                            </div>
+                            <div class="mb-3">
+                                <label for="message" class="form-label">Message</label>
+                                <textarea class="form-control" id="message" name="message" rows="4" style="background-color: #000000; color:#ffffff;" required></textarea>
+                                <div class="invalid-feedback">
+                                    Please enter your message.
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-outline-primary">Send Email</button>
+                        </form>
+                    </div>
+                </div>
             </div>
+
             <div><span class="prompt">jordane@sikati:~$ </span><span class="cursor">&nbsp;</span></div>
         </div>
-        
+
         <div class="terminal-footer">
           <div class="container">
             <div class="row justify-content-md-center">
@@ -182,5 +222,40 @@
         </div>
     </div>
 </body>
+
+<script type="text/javascript">
+    // Starter JavaScript for disabling form submissions if there are invalid fields
+    (function () {
+        'use strict'
+        var forms = document.querySelectorAll('.needs-validation')
+        Array.prototype.slice.call(forms)
+            .forEach(function (form) {
+                form.addEventListener('submit', function (event) {
+                    if (!form.checkValidity()) {
+                        event.preventDefault()
+                        event.stopPropagation()
+                    } else {
+                        event.preventDefault();
+                        // Get form data
+                        var formData = {
+                            from_name: document.getElementById('name').value,
+                            from_email: document.getElementById('email').value,
+                            message: document.getElementById('message').value
+                        };
+
+                        // Send email
+                        emailjs.send('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', formData)
+                            .then(function(response) {
+                                alert('Email sent successfully!');
+                            }, function(error) {
+                                alert('Failed to send email: ' + JSON.stringify(error));
+                            });
+                    }
+
+                    form.classList.add('was-validated')
+                }, false)
+            })
+    })()
+</script>
 
 </html>
