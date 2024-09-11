@@ -209,3 +209,9 @@ p>span{
 p>i{
     color: darksalmon;
 }
+
+form>input{
+    color: #ffffff;
+    border: 1px solid #ffffff;
+    background-color: #000000;
+}
