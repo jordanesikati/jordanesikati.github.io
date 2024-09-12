@@ -29,6 +29,17 @@
             font-size: 13px;
             font-weight: bolder;
         } 
+
+        .centered-text {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            color: white; /* Adjust text color for visibility */
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+        }
     </style>
     <script type="text/javascript">
         (function(){
@@ -57,8 +68,7 @@
         </div>
         
         <div class="terminal-body">
-            <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>About</strong</span></div>
-            <br/>
+        
             <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
                 <symbol id="check-circle-fill" viewBox="0 0 16 16">
                   <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
@@ -70,135 +80,155 @@
                   <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
                 </symbol>
             </svg>
-              
-            <div class="alert alert-primary d-flex align-items-center" role="alert">
-                <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-                <div>
-                    Passionate about pushing the boundaries of AI at the edge and driving innovation in next-generation smart applications
+
+            <div class="container">
+                <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>ABOUT</strong></span></div>
+                <br/>
+                <br/>
+                <div class="alert alert-primary d-flex align-items-center" role="alert">
+                    <svg class="bi flex-shrink-0 me-2" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+                    <div>
+                        Passionate about pushing the boundaries of AI at the edge and driving innovation in next-generation smart applications
+                    </div>
+                </div>
+            </div> 
+            
+            <br/>
+            <br/>
+            <div class="container">
+                <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>PORTFOLIO</strong></span></div>
+                <br/>
+                <br/>
+                <h4><span class="badge rounded-pill bg-dark text-white"> <img src="assets/images/void.jpeg" class="rounded-circle" alt="..." width="50" height="50"/> CASNA &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></h4>
+                <br/>
+                <p>Development of a Digital Calibration Simulator for High-Precision Scales and Analysis of Calibration Noise in the Commercial Model of CAS: MWII</p>
+                <p>Worked in conjunction with the Research and Development (R&D) Department to successfully design and develop CAS MWII Noise Analysis Software (CASNA)</p>
+                <p class="status success">Completed</p>
+            </div>
+            <br/>
+            <div class="container">
+                <h4><span class="badge rounded-pill bg-dark text-white"> <img src="assets/images/bis-eis-dl.jpg" class="rounded-circle" alt="..." width="50" height="50"/> BIS/EIS-DL &nbsp;&nbsp;</span></h4>
+                <br/>
+                <p>Smart Farming Enabled Bioimpedance Spectroscopy (BIS), Electrical Impedance Spectroscopy (EIS), and Deep Learning (DL)</p>
+                <p>Collaborating with the Research and Development (R&D) Department to successfully research and develop Machine Vision and Machine Learning techniques for Precision Agriculture.</p>
+                <p class="status pending">Pending</p>
+            </div>
+            <br/>
+            <div class="container">
+                <h4><span class="badge rounded-pill bg-dark text-white"> <img src="assets/images/void.jpeg" class="rounded-circle" alt="..." width="50" height="50"/> GBM-WEB &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</span></h4>
+                <br/>
+                <p>Designed, Developed, hosted, and maintained <a href="https://guineebiomaintenance.com">guineebiomaintenance.com</a></p>
+                <p>Designing, developing, and deploying GBM E-Commerce Platform </p>
+                <p class="status in-progress">In Progress</p>
+            </div>
+            <br/>
+            <div class="container">
+                <h4><span class="badge rounded-pill bg-dark text-white"> <img src="assets/images/greenratory.png" class="rounded" alt="..." width="50" height="50"/> GREENRATORY &nbsp;</span></h4>
+                <br/>
+                <p>Sustainable Agriculture and Biomedical.</p>
+                <p>Computer vision, a subfield of artificial intelligence (AI), involves the use of algorithms to understand and interpret visual data. In recent years, the application 
+                    of computer vision has expanded across various domains, including sustainable agriculture and biomedical sciences. These sectors have benefited significantly from 
+                    automated image processing, enabling enhanced productivity, disease detection, and precision management.
+                </p>
+                <p class="status in-progress">In Progress</p>
+                <div class="row">
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="assets/images/saved-raw.png" alt="..." width="230" height="200">
+                        <div class="caption">
+                          <p class="centered-text">Object</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="assets/images/saved-ply.png" alt="..." width="200" height="200" >
+                        <div class="caption">
+                          <p class="centered-text">Point Clouds</p>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="col-md-4">
+                    <div class="thumbnail">
+                        <img src="assets/images/saved-trait.png" alt="..." width="430" height="230">
+                        <div class="caption">
+                          <p class="centered-text">Trait</p>
+                        </div>
+                    </div>
+                  </div>
                 </div>
             </div>
-
-            <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>Portfolio</strong></span></div>
             <br/>
             
-            <table class="table table-bordered table-hover">
-                <thead class="">
-                    <tr>
-                        <th>Job ID</th>
-                        <th>Description</th>
-                        <th>Starting Year</th>
-                        <th>Status</th>
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>1</td>
-                        <td><span class="badge rounded-pill bg-dark text-white"><img src="assets/images/void.jpeg" class="rounded-circle" alt="..." width="50" height="50"/> CASNA  &nbsp;&nbsp;&nbsp;&nbsp;</span></td>
-                        <td>2020</td>
-                        <td class="status success">Completed</td>
-                        <td>
-                            <a href="#" class="btn btn-outline-success">
-                                <span class="material-icons">terminal</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>2</td>
-                        <td><span class="badge rounded-pill bg-dark text-white"><img src="assets/images/bis-eis-dl.jpg" class="rounded-circle" alt="..." width="50" height="50"/> BIS/EIS-DL </span></td>
-                        <td>2022</td>
-                        <td class="status pending">Pending</td>
-                        <td>
-                            <a href="#" class="btn btn-outline-success">
-                                <span class="material-icons">terminal</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>3</td>
-                        <td><span class="badge rounded-pill bg-dark text-white"><img src="assets/images/void.jpeg" class="rounded-circle" alt="..." width="50" height="50"/> GBM-WEB  &nbsp;&nbsp;</span></td>
-                        <td>2022</td>
-                        <td class="status in-progress">In Progress</td>
-                        <td>
-                            <a href="#" class="btn btn-outline-success">
-                                <span class="material-icons">terminal</span>
-                            </a>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>4</td>
-                        <td><span class="badge rounded-pill bg-dark text-white"> <img src="assets/images/greenratory.png" class="rounded" alt="..." width="50" height="50"/> GREENRATORY </span></td>
-                        <td>2024</td>
-                        <td class="status in-progress">In Progress</td>
-                        <td>
-                            <a href="#" class="btn btn-outline-success">
-                                <span class="material-icons">terminal</span>
-                            </a>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+            <div class="container">
+            <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>SERVICES</strong></span></div>
             <br/>
-            <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>Services</strong></span></div>
+                <ul class="list-group list-group-flush custom-list">
+                    <li class="list-group-item"><span>[+]</span> Design</li>
+                    <li class="list-group-item"><span>[+]</span> Development</li>
+                    <li class="list-group-item"><span>[+]</span> Test</li>
+                    <li class="list-group-item"><span>[+]</span> Deployment</li>
+                    <li class="list-group-item"><span>[+]</span> Maintenace</li>
+                </ul>
+            </div>
             <br/>
-            <ul class="list-group list-group-flush custom-list">
-                <li class="list-group-item"><span>[+]</span> Design</li>
-                <li class="list-group-item"><span>[+]</span> Development</li>
-                <li class="list-group-item"><span>[+]</span> Test</li>
-                <li class="list-group-item"><span>[+]</span> Deployment</li>
-                <li class="list-group-item"><span>[+]</span> Maintenace</li>
-            </ul>
-            <br/>
-            <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>Contact</strong></span></div>
-            <div class="row">
-                <div class="col-6">
-                    <div>
-                        <span class="output">
-                        <br/>
-                        {
+            
+            <div class="container">
+                <div><span class="prompt">jordane@sikati:~$</span><span class="command"> <i class="material-icons">subdirectory_arrow_right</i><strong>CONTACT</strong></span></div>
+                <div class="row">
+                    <div class="col-6">
+                        <div>
+                            <span class="output">
+                            <br/>
+                            {
+                                <br/><br/>
+                                <p>&nbsp;&nbsp;<i class="material-icons">mail</i> "Email": <span>"jordanesikati@gmail.com"</span>,</p>
+                                <p>&nbsp;&nbsp;<i class="material-icons">call</i> "Phone": <span>None</span>,</p>
+                                <p>&nbsp;&nbsp;<i class="material-icons">location_on</i> "Address": <span>"Ottawa, ON"</span></p>
+                                <p>&nbsp;&nbsp;&nbsp;&nbsp;<img class="rounded" src="assets/images/ontario.png" alt="..." width="200" height="200" style="border: 1px solid #ffffff;"></p>
+                            }
                             <br/><br/>
-                            <p>&nbsp;&nbsp;<i class="material-icons">mail</i> "Email": <span>"jordanesikati@gmail.com"</span>,</p>
-                            <p>&nbsp;&nbsp;<i class="material-icons">call</i> "Phone": <span>None</span>,</p>
-                            <p>&nbsp;&nbsp;<i class="material-icons">location_on</i> "Address": <span>"Ottawa, ON"</span></p>
-                            <p>&nbsp;&nbsp;&nbsp;&nbsp;<img class="rounded" src="assets/images/ontario.png" alt="..." width="200" height="200" style="border: 1px solid #ffffff;"></p>
-                        }
-                        <br/><br/>
-                        </span>
+                            </span>
+                        </div>
+                    </div>
+    
+                    <div class="col-6">
+                        <div class="container mt-5">
+                            <h3 class="mb-4">Contact Us</h3>
+                            <form id="contact-form" class="needs-validation" novalidate>
+                                <div class="mb-3">
+                                    <label for="name" class="form-label">Name</label>
+                                    <input type="text" class="form-control" id="name" name="name" style="background-color: #000000; color:#ffffff;" required>
+                                    <div class="invalid-feedback">
+                                        Please enter your name.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label">Email</label>
+                                    <input type="email" class="form-control" id="email" name="email" style="background-color: #000000; color:#ffffff;" required>
+                                    <div class="invalid-feedback">
+                                        Please enter a valid email address.
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="message" class="form-label">Message</label>
+                                    <textarea class="form-control" id="message" name="message" rows="4" style="background-color: #000000; color:#ffffff;" required></textarea>
+                                    <div class="invalid-feedback">
+                                        Please enter your message.
+                                    </div>
+                                </div>
+                                <button type="submit" class="btn btn-outline-primary">Send Email</button>
+                            </form>
+                        </div>
                     </div>
                 </div>
-
-                <div class="col-6">
-                    <div class="container mt-5">
-                        <h3 class="mb-4">Contact Us</h3>
-                        <form id="contact-form" class="needs-validation" novalidate>
-                            <div class="mb-3">
-                                <label for="name" class="form-label">Name</label>
-                                <input type="text" class="form-control" id="name" name="name" style="background-color: #000000; color:#ffffff;" required>
-                                <div class="invalid-feedback">
-                                    Please enter your name.
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="email" class="form-label">Email</label>
-                                <input type="email" class="form-control" id="email" name="email" style="background-color: #000000; color:#ffffff;" required>
-                                <div class="invalid-feedback">
-                                    Please enter a valid email address.
-                                </div>
-                            </div>
-                            <div class="mb-3">
-                                <label for="message" class="form-label">Message</label>
-                                <textarea class="form-control" id="message" name="message" rows="4" style="background-color: #000000; color:#ffffff;" required></textarea>
-                                <div class="invalid-feedback">
-                                    Please enter your message.
-                                </div>
-                            </div>
-                            <button type="submit" class="btn btn-outline-primary">Send Email</button>
-                        </form>
-                    </div>
-                </div>
+                <br/><br/>
             </div>
 
-            <div><span class="prompt">jordane@sikati:~$ </span><span class="cursor">&nbsp;</span></div>
+            <div class="container">
+                <div><span class="prompt">jordane@sikati:~$ </span><span class="cursor">&nbsp;</span></div>
+            </div>
+ 
         </div>
 
         <div class="terminal-footer">
